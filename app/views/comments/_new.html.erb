@@ -1,0 +1,8 @@
+<!-- This form will submit to a route like /posts/:post_id/comments (POST
+  request), which would typically be handled by the CommentsController#create
+  action. -->
+<%= form_with model: [post, Comment.new] do | form | %>
+  Your comment:<br>
+  <%= form.text_area :content, size: "20x5" %><br>
+  <%= form.submit %>
+<% end %>

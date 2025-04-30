@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_post
 
   def create
-    @posts.comments.create! params.expect(comment: [ :content ])
+    @post.comments.create! params.expect(comment: [ :content ])
     redirect_to @post
   end
 
